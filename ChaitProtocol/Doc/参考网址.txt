@@ -1,0 +1,5 @@
+﻿字母编码UTF8和ASCII一样
+
+将ASCII转换为字符：http://topic.csdn.net/t/20040405/23/2929468.html
+
+将字符值转换为ASCII：http://www.soidc.net/discuss/5/060919/08/415776_1.html

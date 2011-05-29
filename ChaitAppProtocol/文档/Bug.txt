@@ -1,0 +1,12 @@
+﻿1 连续发送两条信息，接受方会认为是一条一起接受？？
+Ans: TCPClient接受到信息的时候，应该使用lock锁定NetworkStream延迟下一条消息的接收
+Exa：
+                lock (client.GetStream())
+                {
+                    bytesRead = client.GetStream().EndRead(ar);
+                }
+Mak: 未解决
+
+
+2 发送的字符和接受的字符不同
+Ans: C# char使用UTF-8（UTF-16?）编码,超过128的标志会被认为是超过一个byte，注意发送和接受的统一。
